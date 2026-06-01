@@ -1,6 +1,7 @@
 import { lazy, memo, Suspense, useEffect, useRef, useState } from 'react'
 import { SourceList, type Source } from './SourceList'
 import { PromptCards } from './PromptCards'
+import remarkGfm from 'remark-gfm'
 
 // Lazy-loaded: ~30kB gzipped only fetched after first assistant message renders.
 const ReactMarkdown = lazy(() => import('react-markdown'))
@@ -73,6 +74,7 @@ const MessageItem = memo(function MessageItem({ msg, index }: MessageItemProps) 
           <div className="markdown-body">
             <Suspense fallback={<>{msg.content}</>}>
               <ReactMarkdown
+                remarkPlugins={[remarkGfm]}
                 components={{
                   text: ({ children }) => {
                     if (typeof children === 'string') {
