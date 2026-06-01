@@ -508,6 +508,30 @@ input, textarea {
   font-style: italic;
 }
 
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid var(--hairline);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: var(--surface-strong);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.markdown-body tr:nth-child(even) {
+  background: var(--surface-soft);
+}
+
 /* ================================
    Source List
    ================================ */
