@@ -2,7 +2,7 @@ import 'dotenv/config';
 import OpenAI from 'openai';
 
 const NVIDIA_BASE_URL = 'https://integrate.api.nvidia.com/v1';
-const CHAT_MODEL = 'nvidia/nemotron-3-super-120b-a12b';
+const CHAT_MODEL = 'nvidia/nemotron-mini-4b-instruct';
 const EMBED_MODEL = 'nvidia/nv-embedqa-e5-v5';
 
 const apiKey = process.env.NVIDIA_API_KEY;
