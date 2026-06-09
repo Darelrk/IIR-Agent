@@ -1,7 +1,7 @@
 import OpenAI from 'openai';
 
 const NVIDIA_BASE_URL = 'https://integrate.api.nvidia.com/v1';
-export const CHAT_MODEL = 'nvidia/nemotron-mini-4b-instruct';
+export const CHAT_MODEL = 'meta/llama-3.3-70b-instruct';
 export const EMBED_MODEL = 'nvidia/nv-embedqa-e5-v5';
 export const EMBED_DIMENSION = 1024;
 
